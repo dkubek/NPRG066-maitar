@@ -17,8 +17,10 @@
 
 const char USAGE_STR[] = "usage: %s -t [ file1 file2 ... ] -f ARCHIVE ";
 
-/* POSIX header.  */
-
+/*
+ * POSIX header.
+ * Source: https://www.gnu.org/software/tar/manual/html_node/Standard.html
+ */
 struct posix_header
 {				/* byte offset */
 	char name[100];		/*   0 */
@@ -350,7 +352,6 @@ remove_str(char *arr[], int size, char *str)
 	}
 	return (0);
 }
-
 
 /*
  * Report files not found in the archive to stderr. Return number of files
